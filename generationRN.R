@@ -1,7 +1,6 @@
 ## How to generate 100 random numbers from uniform distribution?
 runif(100, min=-1, max=1)
 
-
 ## Arguments min=0 and max=1 are set by default. It means that if we do not
 ## explicitly state min and max, the funcntion will generate n random numbers
 ## from [0,1] interval:
@@ -13,7 +12,7 @@ runif(100) ## = ruinf(100, min=0, max=1)=runif(100, 0, 1)
 .Random.seed  ## gives the state of the RNG
 a=.Random.seed ## we save RNG state in a vector 
 set.seed(a)    ## set a to be our seed  
-runif(5) ##now we are generating 100 RN from unifrom distribution using the chosen seed (1)
+runif(5) ##now we are generating 5 RN from unifrom distribution using the chosen seed (1)
 runif(5) ## next 5 numbers are are generating from the point, where algorithm has "stopped" (2)
 set.seed(a)
 runif(5)   ## allows us to replicate the results of the previous generating
