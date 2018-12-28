@@ -3,7 +3,7 @@ runif(100, min=-1, max=1)
 
 ## Arguments min=0 and max=1 are set by default. It means that if we do not
 ## explicitly state min and max, the funcntion will generate n random numbers
-## from [0,1] interval:
+## from (0,1) interval:
 runif(100) ## = ruinf(100, min=0, max=1)=runif(100, 0, 1)
 
 
