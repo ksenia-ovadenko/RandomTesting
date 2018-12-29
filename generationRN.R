@@ -3,17 +3,17 @@ runif(100, min=-1, max=1)
 
 ## Arguments min=0 and max=1 are set by default. It means that if we do not
 ## explicitly state min and max, the funcntion will generate n random numbers
-## from (0,1) interval:
+## from (0,1) interval (standart uniform distribution):
 runif(100) ## = ruinf(100, min=0, max=1)=runif(100, 0, 1)
 
 
 ## if we want to replicate the results of a RNG session, we need to use 
 ## the same seed:
 .Random.seed  ## gives the state of the RNG
-a=.Random.seed ## we save RNG state in a vector 
-set.seed(a)    ## set a to be our seed  
-runif(5) ##now we are generating 5 RN from unifrom distribution using the chosen seed (1)
-runif(5) ## next 5 numbers are are generating from the point, where algorithm has "stopped" (2)
+a=.Random.seed ## saves RNG state in a vector 
+set.seed(a)    ## sets "a" to be our seed  
+runif(5) ## now we are generating 5 RN from unifrom distribution using the chosen seed       (1)
+runif(5) ## next 5 numbers are generated from the "point", where the algorithm has "stopped" (2)
 set.seed(a)
 runif(5)   ## allows us to replicate the results of the previous generating
 set.seed(a)
@@ -34,5 +34,5 @@ c = runif(100, min = 0, max = 1) ## generating 100 quantiles
 qnorm(c) ## getting random numbers from normal distribution with quntile function 
 
 ##Switching RNG
-RNGkind() ##query of currently used RNG. Mersenne Twister is set by default
-RNGkind("Wichmann-Hill") ## set a new algorithm
+RNGkind() ## query of currently used RNG. Mersenne Twister is set by default
+RNGkind("Wichmann-Hill") ## sets a new algorithm
